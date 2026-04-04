@@ -45,7 +45,7 @@ $(document).ready(function () {
 })
 
 
-// To fetch the data from .json file
+
 function fetchData() {
   return new Promise((res, err) => {
     const data = fetch("./data.json").then(response => response.json())
@@ -54,13 +54,13 @@ function fetchData() {
 }
 
 
-// Generatign random indexes for country and correct/wrong answers
+
 
 function gettingRandomNums(data) {
   const max = data.length
   recData = data
-  const countryIndex = Math.round(Math.random() * max) //Index for country
-  answer = recData[countryIndex].capital //Global variable for correct answer
+  const countryIndex = Math.round(Math.random() * max) 
+  answer = recData[countryIndex].capital 
   const country = recData[countryIndex].country
 
 
